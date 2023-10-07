@@ -1,9 +1,9 @@
 import './App.css'
-import UserFinder from './components/userFinder/userFinder'
+import CustomRoutes from './components/customRoutes/customRoutes'
 
 function App() {
   return (
-    <UserFinder/>
+    <CustomRoutes/>
   )
 }
 

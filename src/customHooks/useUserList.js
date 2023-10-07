@@ -5,7 +5,7 @@ function useUserList(){
     const[userLists, setUserlist]=useState([])
     async function downloadUsers(){
         
-        const response=await axios.get('  https://api.github.com/users');
+        const response=await axios.get('  https://api.github.com/users'); 
         const userData=response.data;
         console.log(userData);
        
