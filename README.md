@@ -1,5 +1,5 @@
 
-# Github-User-Avatar-Finderv
+# Github-User-Avatar-Finder
 
  ### Github API 
  
