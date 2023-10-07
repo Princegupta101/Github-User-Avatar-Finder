@@ -7,9 +7,7 @@ function CustomRoutes(){
         <Routes>
             <Route  path="/" element={<UserFinder/>}/>
           <Route  path="/:name" element={<Userdetails/>}/>
-        </Routes>
-        
+        </Routes>     
     )
-
 }
 export default CustomRoutes;
