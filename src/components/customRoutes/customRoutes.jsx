@@ -6,7 +6,7 @@ function CustomRoutes(){
     return(
         <Routes>
             <Route  path="/" element={<UserFinder/>}/>
-          <Route  path="/:name" element={<Userdetails/>}/>
+          <Route  path="/:id" element={<Userdetails/>}/>
         </Routes>     
     )
 }

@@ -5,17 +5,25 @@ function useUserList(){
     const[userLists, setUserlist]=useState([])
 
     async function downloadUsers(){ 
-        const response=await axios.get('  https://api.github.com/users'); 
-        const userData=response.data;
-        const userResult=userData.map((data)=>{
-            return{
-                id: data.id,
-                avatar:data.avatar_url,
-                name:data.login,
-                url:data.url,
-            }
-        })
-        setUserlist(userResult);
+        try {
+            // fetch the users data 
+            const response=await axios.get('  https://api.github.com/users'); 
+            const userData=response.data;
+            // iterate to every user 
+            const userResult=userData.map((data)=>{
+                return{
+                    id: data.id,
+                    avatar:data.avatar_url,
+                    name:data.login,
+                    url:data.url,
+                }
+            })
+            //set the imp data
+            setUserlist(userResult);
+            
+        } catch (error) {
+            console.log("something went wrong");
+        }
         setLoding(false);
     }
     useEffect(()=>{

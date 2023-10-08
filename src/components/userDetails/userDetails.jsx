@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
 import useUserDetails from "../../customHooks/useUserDetails";
 
-function Userdetails(){
-    const{name}=useParams();
-    const[userDetail]=useUserDetails({name});
+function Userdetails({name}){
+    const{id}=useParams();
+    const[userDetail]=useUserDetails({id, name});
     return(
-        <div className="flex gap-8 items-center justify-center w-screen   h-screen">
+        <div className="flex gap-8 items-center justify-center mt-28 ">
             <div>
                  <img src={userDetail.avatar} 
                  className='  h-80 border-1  border-black  rounded-2xl '  />
